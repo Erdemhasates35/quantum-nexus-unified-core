@@ -1,2 +1,7 @@
-# quantum-nexus-unified-core
-Quantum Nexus OS - Tüm modüller tek çatı altında. Production Swarm + Solana + Next.js Edge Runtime
+# Quantum Nexus OS Unified Core
+
+α-Coupling Paradigm v14.0
+
+Tüm modüller (Swarm, Solana, Edge Runtime, Infra) tek monorepo'da.
+
+Production Ready.
