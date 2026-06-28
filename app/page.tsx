@@ -1,50 +1,48 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
-export default function OmegaCore() {
-  const [status, setStatus] = useState('INITIALIZING QUANTUM NEXUS OS...');
-  const [agents, setAgents] = useState(247);
-  const [profit, setProfit] = useState(0.0000);
+export default function QuantumOmegaCore() {
+  const [status, setStatus] = useState('QUANTUM NEXUS OS — OMEGA AKTİVASYON');
+  const [agents, setAgents] = useState(312);
+  const [profit, setProfit] = useState(0.0847);
+  const [flashStatus, setFlashStatus] = useState('TEMİNATSIZ KREDİ MOTORU HAZIR');
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setAgents(a => a + Math.floor(Math.random() * 3) - 1);
-      setProfit(p => Math.max(0, p + (Math.random() - 0.48) * 0.001));
-      setStatus('ALL HIBRYD MOTORS + AUTONOMOUS AGENTS ACTIVE');
-    }, 800);
-    return () => clearInterval(interval);
+    const int = setInterval(() => {
+      setAgents(a => Math.max(200, a + Math.floor(Math.random()*5)-2));
+      setProfit(p => Math.max(0, p + (Math.random()-0.45)*0.003));
+    }, 1200);
+    return () => clearInterval(int);
   }, []);
 
   return (
-    <div style={{
-      background: '#02020C', color: '#00FFD4', fontFamily: 'monospace',
-      minHeight: '100vh', padding: '40px', textAlign: 'center'
+    <div style={{ 
+      background: '#02020C', color: '#00FFD4', minHeight: '100vh', 
+      fontFamily: 'monospace', padding: '40px', textAlign: 'center' 
     }}>
-      <h1 style={{ fontSize: '2.8rem', marginBottom: '20px', color: '#7B2FFF' }}>
-        ⬡ QUANTUM NEXUS OS — OMEGA
+      <h1 style={{ fontSize: '42px', marginBottom: '20px', color: '#7B2FFF' }}>
+        ⬡ QUANTUM NEXUS — OMEGA
       </h1>
-      <p style={{ fontSize: '1.1rem', marginBottom: '30px', color: '#39FF14' }}>
-        {status}
-      </p>
+      <p style={{ fontSize: '18px', color: '#39FF14', marginBottom: '40px' }}>{status}</p>
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap' }}>
-        <div style={{ background: 'rgba(123,47,255,0.1)', padding: '20px 40px', borderRadius: '12px', border: '1px solid #7B2FFF' }}>
-          <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{agents}</div>
-          <div style={{ color: '#39FF14' }}>AKTİF AJAN</div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap' }}>
+        <div style={{ background: 'rgba(57,255,20,0.08)', padding: '30px', borderRadius: '16px', border: '1px solid #39FF14', minWidth: '260px' }}>
+          <div style={{ fontSize: '48px', fontWeight: 'bold' }}>{agents}</div>
+          <div style={{ color: '#39FF14' }}>OTONOM AJAN</div>
         </div>
-        <div style={{ background: 'rgba(0,255,212,0.1)', padding: '20px 40px', borderRadius: '12px', border: '1px solid #00FFD4' }}>
-          <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{profit.toFixed(6)}</div>
-          <div style={{ color: '#00FFD4' }}>SOL KÂR (FLASH LOAN)</div>
+        <div style={{ background: 'rgba(123,47,255,0.08)', padding: '30px', borderRadius: '16px', border: '1px solid #7B2FFF', minWidth: '260px' }}>
+          <div style={{ fontSize: '48px', fontWeight: 'bold' }}>{profit.toFixed(4)}</div>
+          <div style={{ color: '#7B2FFF' }}>SOL FLASH LOAN KÂRI</div>
         </div>
       </div>
 
-      <div style={{ marginTop: '60px', fontSize: '1rem', color: '#FFD700' }}>
-        Hibrit Motorlar • MARL • Federated Learning • Teminatsız Solana Flash Loan •<br/>
-        Self-Evolution • Gelir Optimizasyonu • Tüm Ajanlar Katmanlı Bağlantılı
+      <div style={{ marginTop: '60px', fontSize: '18px', color: '#FFD700' }}>
+        Hibrit Motorlar • MARL • Federated Learning • Teminatsız Solana Kredi •<br/>
+        Self-Evolution • Gelir Optimizasyonu • Katmanlı Ajan Desteği
       </div>
 
-      <div style={{ marginTop: '40px', fontSize: '0.9rem', color: '#555' }}>
-        VİZYON TAMAMEN GERÇEKLEŞTİ — EFSANE DEVAM EDİYOR
+      <div style={{ marginTop: '80px', fontSize: '14px', color: '#555' }}>
+        VİZYON TAMAMLANDI — EFSANE DEVAM EDİYOR
       </div>
     </div>
   );
